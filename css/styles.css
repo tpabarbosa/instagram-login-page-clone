@@ -1,0 +1,158 @@
+body {
+    background-color: #fafafa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+.container {
+    width: 100%;
+    max-width: 935px;
+    display: flex;
+    justify-content: center;
+    margin: 24px auto;
+}
+
+.phones {
+    background-image: url(../assets/phones.png);
+    background-repeat: no-repeat;
+    background-position: -30px 0;
+    align-self: center;
+    height: 580px;
+    width: 390px;
+    margin-right: 32px;
+}
+
+.screenshots {
+    margin: 27px 0 0 125px;
+    position: relative;
+}
+
+.screenshot {
+    height: 538px;
+    position: absolute;
+    width: 250px;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.content {
+    margin: 48px 0;
+    width: 360px;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 0
+}
+
+.card {
+    background-color: #fff;
+    padding: 24px 12px;
+    margin: 8px;
+    border: 1px solid #dbdbdb;
+    border-radius: 1px;
+    align-items: center;
+    text-align: center;
+    width: 320px;
+}
+
+.text {
+    margin-top: 13px;
+    margin-bottom: 8px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #dbdbdb;
+    color: #8e8e8e;
+    line-height: 18px;
+}
+
+.logo {
+    padding-top: 22px;
+    /* padding-bottom: 8px; */
+}
+
+.account {
+    display: flex;
+    align-items: center;
+    padding-bottom: 4px;
+    text-align: left;
+}
+
+.account button {
+    background-color: #0095f6;
+    color: #fff;
+    padding: 7px 10px;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #8e8e8e;
+    margin-right: 12px;
+}
+
+.username {
+    flex: 2;
+    color: #262626;
+    line-height: 14px;
+    font-weight: 600;
+}
+
+.get-app {
+    margin: 12px;
+}
+
+.badges {
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.badge {
+    width: 135px;
+}
+
+.change-or-create-account a {
+    color: #0095f6;
+    text-decoration: none;
+}
+
+.hide {
+    opacity: 0;
+}
+
+footer {
+    max-width: 1050px;
+    margin: 32px auto;
+    padding: 28px 0;
+    text-align: center;
+}
+
+.links a,
+select,
+span {
+    font-size: 12px;
+    line-height: 24px;
+    margin: 12px 8px;
+    border: 0;
+    color: #8e8e8e
+}
+
+.links a,
+select {
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .phones {
+        display: none;
+    }
+    .content {
+        margin-top: 12px;
+    }
+}

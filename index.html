@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="phones">
+                <div id="images" class="screenshots">
+                    <img class='screenshot' src="/assets/screenshot_1.png">
+                    <img class='screenshot hide' src="/assets/screenshot_2.png">
+                    <img class='screenshot hide' src="/assets/screenshot_3.png">
+                    <img class='screenshot hide' src="/assets/screenshot_4.png">
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="login card">
+                    <img class="logo" src="/assets/logo.png">
+                    <p class="text">Você pode fazer login nestas contas porque elas estão na sua Central de Contas.</p>
+                    <div class="account">
+                        <img class='avatar' src="/assets/me.jpg">
+                        <p class="username">tatiana.barbosa.106</p>
+                        <button>Entrar</button>
+                    </div>
+                    <div class="account">
+                        <img class='avatar' src="/assets/dio.jpg" />
+                        <p class="username">digitalinnovation.one</p>
+                        <button>Entrar</button>
+                    </div>
+                </div>
+                <div class="change-or-create-account card">
+                    <a href="">Trocar de conta</a> ou <a href="">Cadastre-se</a>
+                </div>
+
+                <p class="get-app">Obtenha o aplicativo</p>
+                <div class="badges">
+                    <img class="badge" src="assets/badge_ios.png" />
+                    <img class="badge" src="assets/badge_android.png" />
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="links">
+            <a>Meta</a> <a>Sobre</a> <a>Blog</a> <a>Carreiras</a> <a>Ajuda</a> <a>API</a> <a>Privacidade</a> <a>Termos</a> <a>Principais contas</a> <a>Hashtags</a> <a>Localizações</a> <a>Instagram Lite</a> <a>Carregamento de contatos e não usuários</a>            <a>Dança</a> <a>Comida e bebida</a> <a>Casa e jardim</a> <a>Música</a> <a>Artes visuais</a>
+
+        </div>
+        <div><select><option value="en">English</option><option value="es">Español (España)</option><option value="pt-br" selected>Português (Brasil)</option></select> <span>© 2022 Instagram from Meta</span></div>
+    </footer>
+
+    <script>
+        let currentImage = 0;
+        const images = document.getElementById('images');
+
+        const update = () => {
+            const timer = setTimeout(() => {
+                for (let i = 0; i < images.children.length; i++) {
+                    if (i === currentImage) {
+                        images.children[i].classList.remove('hide')
+                    } else {
+                        images.children[i].classList.add('hide')
+                    }
+                }
+                if (currentImage < images.children.length - 1) {
+                    currentImage += 1
+                } else {
+                    currentImage = 0
+                }
+                update()
+            }, 3500)
+        }
+
+        update();
+    </script>
+
+</body>
+
+</html>
